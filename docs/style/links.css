@@ -1,0 +1,5 @@
+a {
+	color: var(--bright_white);
+	text-decoration: underline 0.25rem var(--blue);
+	text-decoration-skip-ink: none;
+}

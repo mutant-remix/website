@@ -1,0 +1,19 @@
+input[type=search] {
+	width: 96%;
+	margin: 1rem 0;
+	background: none;
+	color: var(--bright_white);
+	border: none;
+	border-bottom: 2px solid var(--bright_grey);
+}
+
+input[type=search]:focus {
+	outline: none;
+	border-bottom: 2px solid var(--orange);
+}
+
+@media (max-width: 1000px) {
+input[type=search] {
+	width: 100%;
+}
+}

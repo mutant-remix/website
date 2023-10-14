@@ -1,0 +1,29 @@
+header {
+	margin: -5rem -50px -3rem;
+	padding: 13rem 50px 5rem;
+	text-transform: uppercase;
+	background: linear-gradient(var(--magenta), rgba(255,0,0,0));
+	font-size: 1.2rem; 
+}
+
+header ul {
+	all: unset;
+}
+
+header li {
+	display: inline;
+}
+
+header li:not(:last-child)::after {
+	content: " |";
+}
+
+@media (max-width: 700px) {
+	header {
+	    margin: -5rem -25px -3rem;
+	    padding: 13rem 25px 5rem;
+	}
+	section {
+		display: none;
+	}
+}

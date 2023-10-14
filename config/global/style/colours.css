@@ -1,0 +1,22 @@
+html {
+	--background: #3A3736;
+
+	--black: #000000;
+	--light_black: #1C1C1C;
+	--white: #FFFFFF;
+
+	--dark_grey: #626262;
+	--grey: #808080;
+	
+	--dark_orange: #874B39;
+	--orange: #ED6B44;
+
+	--dark_aqua: #577C77;
+	--aqua: #7BB7B0;
+
+	--bright_blue: #5B608F;
+	--blue: #717CDA;
+
+	--bright_purple: #6C339C;
+	--purple: #982FEE;
+}

@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded');
+
+html {
+	font-family: 'Barlow', sans-serif;
+	color: var(--white);
+}
+
+section, h1, h2, h3, h4, h5, h6 {
+	font-weight: 900;
+}
+
+section {
+	font-size: 5.5rem;
+	writing-mode: vertical-rl;
+	transform: scale(-1);
+	margin: 15vh 0 0 -6.5rem;
+	position: fixed;
+	user-select: none;
+	line-height: 0;
+}
+
+h1 {
+	font-size: 3rem;
+	line-height: 3.2rem;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 2.2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+	line-height: 2rem;
+}
+
+h4 {
+	font-size: 1.4rem;
+	line-height: 1.6rem;
+}
+
+h5 {
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
+h6 {
+	font-size: 0.5rem;
+	line-height: 0.6rem;
+}
+
+p {
+	font-size: 1.2rem;
+	line-height: 1.4rem;
+	margin-bottom: 1rem;
+}
+
+code {
+	font-family: 'Fira Code', monospace;
+}
+
+blockquote {
+	margin-right: 0.3rem;
+	padding: 0 0.3rem;
+	background: var(--dark_grey);
+	border-left: 0.3rem solid var(--grey);
+}
+
+.info, .warning {
+	padding: 0.5rem;
+	margin: 1rem 0;
+	border-radius: 3px;
+	display: block;
+}
+
+.info {
+	background: var(--yellow);
+	color: var(--black);
+}
+
+.info a {
+	color: var(--black);
+}
+
+.info::before {
+	content: "🛈";
+}
+
+.warning {
+	background: var(--red);
+	color: var(--bright_white);
+}
+
+.warning::before {
+	content: "⚠";
+}
+
+@media (max-width: 700px) {
+	section {
+		font-size: inherit;
+		writing-mode: inherit;
+		transform: inherit;
+		margin: inherit;
+		position: inherit;
+		user-select: inherit;
+		line-height: inherit;
+	}
+}

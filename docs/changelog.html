@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<head>
+<style>
+@import "style/colours.css";
+@import "style/footer.css";
+@import "style/images.css";
+@import "style/input.css";
+@import "style/navbar.css";
+@import "style/standard.css";
+@import "style/type.css";
+
+</style>
+<html lang="en">
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="author" content="Revolt">
+<meta property="og:site_name" content="Mutant Remix">
+<title>Mutant Remix</title>
+
+</head>
+<body>
+<div class="page">
+
+
+    <div id="nav">
+    	<div>
+    		<li><a href="/"><img style="height: 2.5rem; width: auto;" src="assets/Mutant_Remix_Wordmark.svg"
+    					alt="Mutant Remix"></a>
+    		</li>
+    	</div>
+    	<div>
+    		<li><a href="/changelog">changelog</a></li>
+    		<li><a href="/demo">demo</a></li>
+    		<li><a href="/download">download</a></li>
+    	</div>
+    </div>
+    
+    <div id="content">
+    <h1>Changelog</h1>
+<p>See the latest and greatest in blob technology.</p>
+<input type="search" id="blogsearch" onkeyup="search()" placeholder="Search posts">
+<div id="blogposts">
+  <div>
+<p>Major Release</p>
+<h3><a href="/blog/Log">First Log</a></h3>
+</div>
+  <div>
+<script>
+function search() {
+  // Declare variables
+  var input, filter, div, a, i, txtValue;
+  input = document.getElementById('blogsearch');
+  filter = input.value.toUpperCase();
+  ul = document.getElementById("blogposts");
+  div = ul.getElementsByTagName('div');
+
+  // Loop through all divst items, and hide those who don't match the search query
+  for (i = 0; i < div.length; i++) {
+    a = div[i].getElementsByTagName("a")[0];
+    txtValue = a.textContent || a.innerText;
+    if (txtValue.toUpperCase().indexOf(filter) > -1) {
+      div[i].style.display = "";
+    } else {
+      div[i].style.display = "none";
+    }
+  }
+}
+</script>
+
+
+    <footer>
+    	Mutant Remix is not affiliated with <a href="https://adduce.vale.rocks">mutant.tech</a>. This is a transformation of
+    	the original Mutant Standard emoji
+    	pack, which is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+    	Site built with <a href="https://adduce.vale.rocks">Adduce</a>.
+    </footer>
+    
+</div>
+</body>
