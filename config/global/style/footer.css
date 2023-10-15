@@ -1,11 +1,13 @@
 footer {
     width: 100%;
+	position: absolute;
+	left: 0;
     text-align: center;
 	margin: 50px 0;
+	padding: 10px 0;
 	background: var(--light_black);
 }
 
 footer a:link, footer a:visited, footer a:hover, footer a:active {
-    color: var(--orange);
 	text-decoration: none;
 }

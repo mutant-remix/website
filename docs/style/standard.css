@@ -13,7 +13,6 @@ html, body {
 }
 /* Typographic tweaks */
 body {
-	line-height: calc(1em + 0.5rem);
 	-webkit-font-smoothing: antialiased;
 }
 /* Improve media defaults */
@@ -38,19 +37,15 @@ body {
 
 #blogposts {
 	display: flex;
-	flex-wrap: wrap;
-	margin-bottom: 5rem;
-	gap: 4%;
+	flex-direction: column;
 }
 
 #blogposts div{
 	border-bottom: 2px solid var(--bright_grey);
-	flex-basis: 46%;
+	width: 100%;
  	box-sizing: border-box;
-	height: 8rem;
-	padding: 0.5rem 0;
+	padding: 20px 0;
 	overflow: hidden;
-	text-overflow: ellipsis;
 }
 
 #blogposts h3 {
@@ -63,17 +58,12 @@ body {
 }
 
 #blogposts p {
-	text-transform: uppercase;
 	margin: 0;
 }
 
-@media (max-width: 1000px) {
-#blogposts {
-	flex-direction: column;
-}
-
-#blogposts div{
-	width: 100%;
+@media (max-width: 700px) {
+body {
+    margin: 0 10px;
 }
 
 }

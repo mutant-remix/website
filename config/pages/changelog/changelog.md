@@ -2,35 +2,39 @@
 
 See the latest and greatest in blob technology.
 
-<input type="search" id="blogsearch" onkeyup="search()" placeholder="Search posts">
+<input type="search" id="blogsearch" onkeyup="search()" placeholder="Search releases">
 
 <div id="blogposts">
   <div>
 
   Major Release
-  ### [First Log](/blog/Log)
+  ### [v54.0 - Revenge of the Blob](/changelog/v54_0)
   </div>
   <div>
+
+  Major Release
+  ### [v1.0 - Welcome](/changelog/v1_0)
+  </div>
+</div>
 
 
 <script>
 function search() {
-  // Declare variables
-  var input, filter, div, a, i, txtValue;
-  input = document.getElementById('blogsearch');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("blogposts");
-  div = ul.getElementsByTagName('div');
+  // Get the input and filter value
+  var input = document.getElementById('blogsearch');
+  var filter = input.value.trim().toUpperCase();
 
-  // Loop through all divst items, and hide those who don't match the search query
-  for (i = 0; i < div.length; i++) {
-    a = div[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      div[i].style.display = "";
-    } else {
-      div[i].style.display = "none";
-    }
+  // Get the list of blog posts
+  var ul = document.getElementById("blogposts");
+  var divs = ul.getElementsByTagName('div');
+
+  // Loop through divs and hide or display based on the search query
+  for (var i = 0; i < divs.length; i++) {
+    var a = divs[i].querySelector("a");
+    var txtValue = a.textContent || a.innerText;
+    var shouldDisplay = txtValue.trim().toUpperCase().includes(filter);
+
+    divs[i].style.display = shouldDisplay ? "" : "none";
   }
 }
 </script>

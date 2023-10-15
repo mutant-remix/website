@@ -12,6 +12,12 @@ img#right {
 	margin: 10px 0px 10px 10px;
 }
 
+img.emoji {
+	display: inline;
+	height: 1.2rem;
+	width: auto;
+}
+
 @media (max-width: 700px) {
 img, img#right, img#left {
     width: 100%;

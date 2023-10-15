@@ -1,7 +1,6 @@
 <style>
 	body {
 		text-align: center;
-		align: center;
 	}
 
 	#hero {
@@ -11,6 +10,8 @@
 		display: flex;
 		align-items: center;
 		text-align: left;
+        margin-bottom: 5dvh;
+        justify-content: center;
 	}
 
 	#herotext {
@@ -20,7 +21,8 @@
 
 	#herotext h1 {
 		font-size: 4rem;
-		line-height: 3.5rem;
+		line-height: 4rem;
+        margin-bottom: 1rem;
 	}
 
 	#bubble {
@@ -32,8 +34,13 @@
     #lists {
         display: flex;
 		text-align: left;
+        padding: 0 3rem;
     }
 
+    li {
+        list-style-position: initial;
+    }
+    
     #dos {
         list-style-image: url("/assets/green_tick.svg");
     }
@@ -46,6 +53,15 @@
     #lists {
         flex-direction: column;
     }
+	#hero {
+        flex-direction: column-reverse;
+		text-align: center;
+    }
+
+    #herotext {
+        max-width: 100%
+    }
+
     }
 </style>
 
@@ -53,7 +69,13 @@
 	<div id="hero">
 		<div id="herotext">
 			<h1>An emoji pack so good, you'll never want to use another.</h1>
-			Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.
+			Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.</br>
+            <button class="pushable" onclick="location.href='https://github.com/mutant-remix/mutant-remix/releases'">
+                <span class="edge" style="background: var(--dark_orange);"></span>
+                <span class="front" style="background: var(--orange);">
+                Take me to the downloads!
+                </span>
+            </button>
 		</div>
 		<div id="heroimage">
 			<img src="assets/Emoji_Hero.svg" alt="Emojis bursting from centre point">

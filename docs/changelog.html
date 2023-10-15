@@ -2,6 +2,8 @@
 <head>
 <style>
 @import "style/colours.css";
+@import "style/button.css";
+@import "style/links.css";
 @import "style/footer.css";
 @import "style/images.css";
 @import "style/input.css";
@@ -11,12 +13,30 @@
 
 </style>
 <html lang="en">
-
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="author" content="Revolt">
-<meta property="og:site_name" content="Mutant Remix">
+
 <title>Mutant Remix</title>
+
+<meta property="og:title" content="Mutant Remix" />
+<meta property="og:site_name" content="Mutant Remix">
+<meta property="og:url" content="https://mutant.revolt.chat" />
+<meta name="author" content="Revolt">
+<meta property="og:image" content="https://mutant.revolt.chat/assets/embed.svg" />
+<meta property="og:description" content="An emoji pack so good, you'll never want to use another." />
+
+<meta property="twitter:title" content="Mutant Remix" />
+<meta property="twitter:site" content="@revoltchat" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="https://mutant.revolt.chat/assets/embed.svg" />
+<meta property="twitter:image:alt"
+	content='Image consisting of emojis exploding outwards with the text "An emoji pack so good, you' ll never want to
+	use another."' />
+<meta property="twitter:description" content="An emoji pack so good, you'll never want to use another." />
+
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1280" />
+<meta property="og:image:height" content="720" />
 
 </head>
 <body>
@@ -25,45 +45,48 @@
 
     <div id="nav">
     	<div>
-    		<li><a href="/"><img style="height: 2.5rem; width: auto;" src="assets/Mutant_Remix_Wordmark.svg"
-    					alt="Mutant Remix"></a>
+    		<li><a href="/"><img style="height: 2.5rem; width: auto; display: inline;"
+    					src="assets/Mutant_Remix_Wordmark.svg" alt="Mutant Remix"></a>
     		</li>
     	</div>
     	<div>
     		<li><a href="/changelog">changelog</a></li>
     		<li><a href="/demo">demo</a></li>
-    		<li><a href="/download">download</a></li>
+    		<li><a href="https://github.com/mutant-remix/mutant-remix/releases">download</a></li>
     	</div>
     </div>
     
     <div id="content">
     <h1>Changelog</h1>
 <p>See the latest and greatest in blob technology.</p>
-<input type="search" id="blogsearch" onkeyup="search()" placeholder="Search posts">
+<input type="search" id="blogsearch" onkeyup="search()" placeholder="Search releases">
 <div id="blogposts">
   <div>
 <p>Major Release</p>
-<h3><a href="/blog/Log">First Log</a></h3>
+<h3><a href="/changelog/v54_0">v54.0 - Revenge of the Blob</a></h3>
 </div>
   <div>
+<p>Major Release</p>
+<h3><a href="/changelog/v1_0">v1.0 - Welcome</a></h3>
+</div>
+</div>
 <script>
 function search() {
-  // Declare variables
-  var input, filter, div, a, i, txtValue;
-  input = document.getElementById('blogsearch');
-  filter = input.value.toUpperCase();
-  ul = document.getElementById("blogposts");
-  div = ul.getElementsByTagName('div');
+  // Get the input and filter value
+  var input = document.getElementById('blogsearch');
+  var filter = input.value.trim().toUpperCase();
 
-  // Loop through all divst items, and hide those who don't match the search query
-  for (i = 0; i < div.length; i++) {
-    a = div[i].getElementsByTagName("a")[0];
-    txtValue = a.textContent || a.innerText;
-    if (txtValue.toUpperCase().indexOf(filter) > -1) {
-      div[i].style.display = "";
-    } else {
-      div[i].style.display = "none";
-    }
+  // Get the list of blog posts
+  var ul = document.getElementById("blogposts");
+  var divs = ul.getElementsByTagName('div');
+
+  // Loop through divs and hide or display based on the search query
+  for (var i = 0; i < divs.length; i++) {
+    var a = divs[i].querySelector("a");
+    var txtValue = a.textContent || a.innerText;
+    var shouldDisplay = txtValue.trim().toUpperCase().includes(filter);
+
+    divs[i].style.display = shouldDisplay ? "" : "none";
   }
 }
 </script>

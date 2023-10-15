@@ -1,6 +1,6 @@
 style = ["config/global/style/blogstyle.css"]
 
-head = ["config/global/elements/head.html", "config/global/elements/bloghead.html"]
+head = ["config/global/elements/head.html"]
 [main]
 
 [[main.block]]
@@ -8,5 +8,5 @@ from_str = "config/global/elements/navbar.html"
 style = "html"
 
 [[main.block]]
-text = "<section>Blog</section>"
-style = "html"
+style = "md"
+text = "<img id='banner' src='../assets/changelog_banner.svg' />"

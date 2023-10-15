@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded');
 
 html {
 	font-family: 'Barlow', sans-serif;
@@ -23,37 +22,30 @@ section {
 
 h1 {
 	font-size: 3rem;
-	line-height: 3.2rem;
 }
 
 h2 {
 	font-size: 2rem;
-	line-height: 2.2rem;
 }
 
 h3 {
 	font-size: 1.8rem;
-	line-height: 2rem;
 }
 
 h4 {
 	font-size: 1.4rem;
-	line-height: 1.6rem;
 }
 
 h5 {
 	font-size: 1rem;
-	line-height: 1.2rem;
 }
 
 h6 {
 	font-size: 0.5rem;
-	line-height: 0.6rem;
 }
 
 p {
 	font-size: 1.2rem;
-	line-height: 1.4rem;
 	margin-bottom: 1rem;
 }
 
@@ -68,33 +60,10 @@ blockquote {
 	border-left: 0.3rem solid var(--grey);
 }
 
-.info, .warning {
-	padding: 0.5rem;
-	margin: 1rem 0;
-	border-radius: 3px;
-	display: block;
-}
-
-.info {
-	background: var(--yellow);
-	color: var(--black);
-}
-
-.info a {
-	color: var(--black);
-}
-
-.info::before {
-	content: "🛈";
-}
-
-.warning {
-	background: var(--red);
-	color: var(--bright_white);
-}
-
-.warning::before {
-	content: "⚠";
+li {
+	font-size: 1.2rem;
+	list-style-position: inside;
+	align-items: center;
 }
 
 @media (max-width: 700px) {
