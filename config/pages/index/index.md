@@ -4,7 +4,7 @@
 	}
 
 	#hero {
-		height: 80dvh;
+		min-height: 80dvh;
 		font-size: 1.5rem;
 		line-height: 1.5rem;
 		display: flex;
