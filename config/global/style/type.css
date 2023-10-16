@@ -26,6 +26,7 @@ h1 {
 
 h2 {
 	font-size: 2rem;
+	line-height: 3rem;
 }
 
 h3 {
@@ -46,6 +47,7 @@ h6 {
 
 p {
 	font-size: 1.2rem;
+	line-height: 2rem;
 	margin-bottom: 1rem;
 }
 

@@ -24,12 +24,9 @@
 		line-height: 4rem;
         margin-bottom: 1rem;
 	}
-
-	#bubble {
-		background: var(--orange);
-		border-radius: 35px;
-		padding: 20px 65px;
-	}
+    h2 {
+        margin-top: 1rem;
+    }
     
     #lists {
         display: flex;
@@ -48,8 +45,14 @@
     #donts {
         list-style-image: url("/assets/red_cross.svg");
     }
+	
+    #bubble {
+		background: var(--orange);
+		border-radius: 35px;
+		padding: 20px 65px;
+	}
 
-    @media (max-width: 900px) {
+    @media (max-width: 1000px) {
     #lists {
         flex-direction: column;
     }
@@ -97,6 +100,9 @@ Mutant Remix is licensed under the Creative Commons Attribution-NonCommercial-Sh
 
 <img style="width: 250px; margin-left: auto; margin-right: auto;" src="assets/Copyright.svg"
 		alt="Emojis bursting from centre point">
+
+## Help us make it better.
+Think Mutant Remix is cool? Want to contribute to the project? Mutant Remix is always looking for contributors of all backgrounds. Get involved!
 
 ## So, what am I allowed to do with it?
 Here are a few ground rules regarding how you can use the emoji pack:
