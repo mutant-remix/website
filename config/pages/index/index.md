@@ -3,6 +3,12 @@
 		text-align: center;
 	}
 
+    #landing {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
 	#hero {
 		min-height: 80dvh;
 		font-size: 1.5rem;
@@ -24,6 +30,11 @@
 		line-height: 4rem;
         margin-bottom: 1rem;
 	}
+
+    #information {
+        max-width: 100ch;
+    }
+
     h2 {
         margin-top: 1rem;
     }
@@ -32,10 +43,11 @@
         display: flex;
 		text-align: left;
         padding: 0 3rem;
+        gap: 1rem;
     }
 
     li {
-        list-style-position: initial;
+        list-style-position: inside;
     }
     
     #dos {
@@ -55,6 +67,7 @@
     @media (max-width: 1000px) {
     #lists {
         flex-direction: column;
+        padding: 0;
     }
 	#hero {
         flex-direction: column-reverse;
@@ -64,6 +77,9 @@
     #herotext {
         max-width: 100%
     }
+    
+    #bubble {
+    padding: 20px;
 
     }
 </style>
@@ -84,6 +100,8 @@
 			<img src="assets/Emoji_Hero.svg" alt="Emojis bursting from centre point">
 		</div>
 	</div>
+
+<div id="information">
 
 ## Express yourself in new ways.
 Mutant introduces an exciting array of fresh and distinctive emojis along with various variations, offering you the
@@ -114,7 +132,7 @@ Here are a few ground rules regarding how you can use the emoji pack:
 			<p>Share the love, share the mutants. Copy and redistribute Mutant Remix as you see fit, embracing the spirit of collaboration and creativity.</p>
 		</li>
 		<li>
-			<h3>Make your own! (add attribution!)</h3>
+			<h3>Make it your own! (add attribution!)</h3>
 			<p>You’re free to remix, transform or build upon the Mutant Remix or Mutant Standard emoji pack, as long as you follow the original Creative Commons license.</p>
 		</li>
 	</ul>
@@ -124,7 +142,7 @@ Here are a few ground rules regarding how you can use the emoji pack:
 			<p>You’re not allowed to sell the entirety or parts of the emoji pack or restrict anyone from using it behind a paywall.</p>
 		</li>
 		<li>
-			<h3>Redistribute with the same license.</h3>
+			<h3>Break the license terms.</h3>
 			<p>Mutant, and Mutant Remix by extension, are both licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</p>
 		</li>
 	</ul>
@@ -136,5 +154,6 @@ Here are a few ground rules regarding how you can use the emoji pack:
 ## #SaveTheBlobs
 Help us to save these cute blobs! By using the Mutant Remix emoji pack, you’re not only supporting open-sourceprojects like ours, but are also helping us keep our blobby friends alive. Thank you!
 
+</div>
 </div>
 </div>
