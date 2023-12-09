@@ -6,7 +6,6 @@
 @import "style/links.css";
 @import "style/footer.css";
 @import "style/images.css";
-@import "style/input.css";
 @import "style/navbar.css";
 @import "style/standard.css";
 @import "style/type.css";
@@ -43,74 +42,76 @@
 <div class="page">
 
 
-    <div id="nav">
-    	<div>
-    		<li><a href="/"><img style="height: 2.5rem; width: auto; display: inline;"
-    					src="assets/Mutant_Remix_Wordmark.svg" alt="Mutant Remix"></a>
-    		</li>
-    	</div>
-    	<div>
+    <nav>
+    	<a href="/"><img style="height: 2.5rem; width: auto; display: inline;" src="assets/Mutant_Remix_Wordmark.svg"
+    			alt="Mutant Remix"></a>
+    	<ul>
     		<li><a href="https://github.com/mutant-remix/mutant-remix/blob/master/CONTRIBUTING.md">contributing</a></li>
     		<li><a href="/demo">demo</a></li>
     		<li><a href="https://github.com/mutant-remix/mutant-remix/releases">download</a></li>
-    	</div>
-    </div>
+    	</ul>
+    </nav>
     
     <div id="content">
+    
+
     <h1>Demo</h1>
-<p>Try before you buy - or rather use. These blobby guys are free after all.</p>
-<table>
-  <tbody id="data">
-    <!-- Data will be put in here-->
-  </tbody>
-</table>
-<script src="tarball.js"></script>
-<script>
-  const fetchSampleBlob = () =>
-    fetch("https://cors-anywhere.herokuapp.com/https://github.com/mutant-remix/mutant-remix/releases/download/v54/mtnt_v54_short_svg.tar.gz", { headers: { "X-Requested-With": "https://github.com" } });
-
-  const fetchStreamToDecompressionStream = (response) =>
-    response.body.pipeThrough(new DecompressionStream("gzip"));
-
-  const decompressionStreamToBlob = (decompressedStream) => new Response(decompressedStream).blob();
-
-  const blobToDir = (blob) => new tarball.TarReader().readFile(blob);
-
-  const renderDataInList = (data) => {
-    const tbody = document.getElementById('data');
-
-    data.forEach(item => {
-      if (item.type === 'directory') {
-        // If it's a directory item, create a heading
-        const heading = document.createElement('h2');
-        heading.textContent = item.name;
-        tbody.appendChild(heading);
-      } else {
-        // If it's a file item, create a list item and extract the file name
-        const listItem = document.createElement('li');
-        const fileName = item.name.split('/').pop();
-        listItem.textContent = fileName;
-        tbody.appendChild(listItem);
-      }
-    });
-  };
-
-  fetchSampleBlob()
-    .then(fetchStreamToDecompressionStream)
-    .then(decompressionStreamToBlob)
-    .then(blobToDir)
-     .then(data => {
-    console.log("Data received:", data);
-    renderDataInList(data);
-  })
-    .catch(error => console.error(error));
-</script>
-
+    
+    <p>The demo isn't here just yet...</p>
+    
+    <table>
+      <tbody id="data">
+        <!-- Data will be put in here-->
+      </tbody>
+    </table>
+    
+    <script src="tarball.js"></script>
+    <script>
+      const fetchSampleBlob = () =>
+        fetch("https://cors-anywhere.herokuapp.com/https://github.com/mutant-remix/mutant-remix/releases/download/v54/mtnt_v54_short_svg.tar.gz", { headers: { "X-Requested-With": "https://github.com" } });
+    
+      const fetchStreamToDecompressionStream = (response) =>
+        response.body.pipeThrough(new DecompressionStream("gzip"));
+    
+      const decompressionStreamToBlob = (decompressedStream) => new Response(decompressedStream).blob();
+    
+      const blobToDir = (blob) => new tarball.TarReader().readFile(blob);
+    
+      const renderDataInList = (data) => {
+        const tbody = document.getElementById('data');
+    
+        data.forEach(item => {
+          if (item.type === 'directory') {
+            // If it's a directory item, create a heading
+            const heading = document.createElement('h2');
+            heading.textContent = item.name;
+            tbody.appendChild(heading);
+          } else {
+            // If it's a file item, create a list item and extract the file name
+            const listItem = document.createElement('li');
+            const fileName = item.name.split('/').pop();
+            listItem.textContent = fileName;
+            tbody.appendChild(listItem);
+          }
+        });
+      };
+    
+      fetchSampleBlob()
+        .then(fetchStreamToDecompressionStream)
+        .then(decompressionStreamToBlob)
+        .then(blobToDir)
+         .then(data => {
+        console.log("Data received:", data);
+        renderDataInList(data);
+      })
+        .catch(error => console.error(error));
+    </script>
+    
 
     <footer>
-    	Mutant Remix is not affiliated with <a href="https://adduce.vale.rocks">mutant.tech</a>. This is a transformation of
-    	the original Mutant Standard emoji
-    	pack, which is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.
+    	Mutant Remix is not affiliated with <a href="https://adduce.vale.rocks">mutant.tech</a>.
+    	This is a transformation of the original Mutant Standard emoji pack, which is licensed under the Creative Commons
+    	Attribution-NonCommercial-ShareAlike 4.0 International License.
     	Site built with <a href="https://adduce.vale.rocks">Adduce</a>.
     </footer>
     

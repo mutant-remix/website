@@ -1,20 +1,22 @@
-#nav {
-	font-size: 1.3rem;
+nav {
 	padding: 1rem 0;
 	display: flex;
     align-items: center;
 	justify-content: space-between;
-	background-color: var(--background);
 }
 
-#nav li {
-	display: inline;
-	padding-left: 1rem;
+nav ul {
 	all: unset;
-	font-weight: 900;
 }
 
-#nav a, #nav a:link, #nav a:visited, #nav a:focus, #nav a:hover, #nav a:active {
+nav li {
+	font-size: 1.3rem;
+	font-weight: 900;
+	display: inline;
+	margin-left: 0.5rem;
+}
+
+nav a, nav a:link, nav a:visited, nav a:focus, nav a:hover, nav a:active {
 	all: unset;
 	cursor: pointer;
 }

@@ -6,18 +6,8 @@ html {
 	color: var(--white);
 }
 
-section, h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
 	font-weight: 900;
-}
-
-section {
-	font-size: 5.5rem;
-	writing-mode: vertical-rl;
-	transform: scale(-1);
-	margin: 15vh 0 0 -6.5rem;
-	position: fixed;
-	user-select: none;
-	line-height: 0;
 }
 
 h1 {
@@ -51,8 +41,14 @@ p {
 	margin-bottom: 1rem;
 }
 
+pre {
+	overflow-x: scroll;
+}
+
 code {
 	font-family: 'Fira Code', monospace;
+	overflow: inherit;
+	display: inline-block;
 }
 
 blockquote {
@@ -66,16 +62,4 @@ li {
 	font-size: 1.2rem;
 	list-style-position: inside;
 	align-items: center;
-}
-
-@media (max-width: 700px) {
-	section {
-		font-size: inherit;
-		writing-mode: inherit;
-		transform: inherit;
-		margin: inherit;
-		position: inherit;
-		user-select: inherit;
-		line-height: inherit;
-	}
 }
