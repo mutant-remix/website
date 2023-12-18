@@ -17,7 +17,7 @@ nav li {
 }
 
 nav a:hover {
-	background: gray;
+	background: #c9d4ea;
 	cursor: pointer;
 }
 
