@@ -1,65 +1,65 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fira+Code&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code&display=swap");
 
 html {
-	font-family: 'Barlow', sans-serif;
-	color: var(--white);
+  font-family: "Barlow", sans-serif;
+  color: var(--white);
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-weight: 900;
+  font-weight: 900;
 }
 
 h1 {
-	font-size: 3rem;
+  font-size: 3rem;
 }
 
 h2 {
-	font-size: 2rem;
-	line-height: 3rem;
+  font-size: 2rem;
+  line-height: 3rem;
 }
 
 h3 {
-	font-size: 1.8rem;
+  font-size: 1.8rem;
 }
 
 h4 {
-	font-size: 1.4rem;
+  font-size: 1.4rem;
 }
 
 h5 {
-	font-size: 1rem;
+  font-size: 1rem;
 }
 
 h6 {
-	font-size: 0.5rem;
+  font-size: 0.5rem;
 }
 
 p {
-	font-size: 1.2rem;
-	line-height: 2rem;
-	margin-bottom: 1rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
+  margin-bottom: 2rem;
 }
 
 pre {
-	overflow-x: scroll;
+  overflow-x: scroll;
 }
 
 code {
-	font-family: 'Fira Code', monospace;
-	overflow: inherit;
-	display: inline-block;
+  font-family: "Fira Code", monospace;
+  overflow: inherit;
+  display: inline-block;
 }
 
 blockquote {
-	margin-right: 0.3rem;
-	padding: 0 0.3rem;
-	background: var(--dark_grey);
-	border-left: 0.3rem solid var(--grey);
+  margin-right: 0.3rem;
+  padding: 0 0.3rem;
+  background: var(--dark_grey);
+  border-left: 0.3rem solid var(--grey);
 }
 
 li {
-	font-size: 1.2rem;
-	list-style-position: inside;
-	align-items: center;
+  font-size: 1.2rem;
+  list-style-position: inside;
+  align-items: center;
 }
