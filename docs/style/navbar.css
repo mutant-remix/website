@@ -16,7 +16,11 @@ nav li {
 	margin-left: 0.5rem;
 }
 
-nav a, nav a:link, nav a:visited, nav a:focus, nav a:hover, nav a:active {
-	all: unset;
+nav a:hover {
+	background: #c9d4ea;
 	cursor: pointer;
 }
+
+nav a, nav a:link, nav a:visited, nav a:focus, nav a:active {
+	all: unset;
+	cursor: pointer;
