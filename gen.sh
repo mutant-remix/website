@@ -13,7 +13,7 @@ pages=(
 for page_config in "${pages[@]}"; do
     page="${page_config%% *}"
     output="${page_config#* }"
-    adduce -c "$page" -n "$output" -o docs
+    /home/vale/gitrepos/Adduce/target/release/adduce -c "$page" -n "$output" -o docs
 done
 
 # Copy global styles and assets

@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
+	document.getElementById("options").style.display = "flex";
+	document.getElementById("other").style.display = "block";
+
 	const repoOwner = "mutant-remix";
 	const repoName = "mutant-remix";
 

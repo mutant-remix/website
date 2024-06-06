@@ -1,5 +1,10 @@
+#options,
+#other {
+	display: none;
+}
+
 #options {
-	display: flex;
+	/* Set to flex in download.js */
 	gap: 3rem;
 }
 
