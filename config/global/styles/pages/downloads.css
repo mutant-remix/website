@@ -1,0 +1,14 @@
+#options {
+	display: flex;
+	gap: 3rem;
+}
+
+#other {
+	margin-top: 3rem;
+}
+
+@media (max-width: 750px) {
+	#options {
+		flex-direction: column;
+	}
+}

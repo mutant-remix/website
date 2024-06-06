@@ -1,0 +1,16 @@
+#releases {
+	.release {
+		padding: 1rem 0;
+		border-bottom: 3px solid var(--light_grey);
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+
+		h2,
+		p {
+			margin: 0;
+		}
+	}
+}

@@ -1,235 +1,130 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<style>
-@import "style/colours.css";
-@import "style/button.css";
-@import "style/links.css";
-@import "style/footer.css";
-@import "style/images.css";
-@import "style/navbar.css";
-@import "style/standard.css";
-@import "style/type.css";
-</style>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<title>Mutant Remix</title>
-<link rel="icon" type="image/svg" href="/assets/favicon.svg">
-
-<meta property="og:title" content="Mutant Remix" />
-<meta property="og:site_name" content="Mutant Remix">
-<meta property="og:url" content="https://mutant.revolt.chat" />
-<meta name="author" content="Revolt">
-<meta property="og:image" content="https://mutant.revolt.chat/assets/embed.svg" />
-<meta property="og:description" content="An emoji pack so good, you'll never want to use another." />
-
-<meta property="twitter:title" content="Mutant Remix" />
-<meta property="twitter:site" content="@revoltchat" />
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="https://mutant.revolt.chat/assets/embed.svg" />
-<meta property="twitter:image:alt" content='Image consisting of emojis exploding outwards with the text "An emoji pack so good, you will never want to
-	use another."' />
-<meta property="twitter:description" content="An emoji pack so good, you'll never want to use another." />
-
-<meta property="og:image:type" content="image/svg" />
-<meta property="og:image:width" content="1280" />
-<meta property="og:image:height" content="720" />
-
-</head>
-<body>
-<div class="page">
 
 
-    <nav>
-    	<a href="/"><img style="height: 2.5rem; width: auto; display: inline;" src="assets/Mutant_Remix_Wordmark.svg"
-    			alt="Mutant Remix"></a>
-    	<ul>
-    		<li><a href="https://github.com/mutant-remix/mutant-remix/blob/master/CONTRIBUTING.md">contributing</a></li>
-    		<li><a href="/demo">demo</a></li>
-    		<li><a href="https://github.com/mutant-remix/mutant-remix/releases">download</a></li>
-    	</ul>
-    </nav>
+    <!doctype html>
+    <html lang="en">
+    	<head>
+    		<meta charset="utf-8" />
+    		<meta name="viewport" content="width=device-width, initial-scale=1" />
+    		<meta property="og:site_name" content="Mutant Remix" />
+    		<meta name="author" content="Revolt" />
+    		<meta property="og:locale" content="en_AU" />
+    		<meta property="og:url" content="https://mutant.revolt.chat" />
     
-    <div id="content">
+    		<link rel="stylesheet" href="/styles/style.css">
+    		<link rel="icon" type="image/svg" href="/assets/favicon.svg" />
+    		
+    		<meta property="og:image" content="https://mutant.revolt.chat/assets/embed.svg" />
+    		<meta property="og:image:type" content="image/svg" />
+    		<meta property="og:image:width" content="1280" />
+    		<meta property="og:image:height" content="720" />
     
 
-    <style>
-    	body {
-    		text-align: center;
-    	}
+        <title>Mutant Remix</title>
+        <meta property="og:title" content="Mutant Remix"/>
+        <meta name="description" content="Welcome to the official Mutant Remix website! Dive into our world of unique and expressive emojis. Discover our latest releases, download the emoji pack, and find out how you can contribute to the project." />
+        <meta property="og:description" content="Welcome to Mutant Remix, where emojis get a fun and fresh makeover. Discover, download, and share our unique emoji pack." />
+    		<link rel="stylesheet" href="/styles/pages/index.css">
+    </head>
     
-    	#landing {
-    		display: flex;
-    		flex-direction: column;
-    		align-items: center;
-    	}
+    <body>
     
-    	#hero {
-    		min-height: 80dvh;
-    		font-size: 1.5rem;
-    		line-height: 1.5rem;
-    		display: flex;
-    		align-items: center;
-    		text-align: left;
-    		margin-bottom: 5dvh;
-    		justify-content: center;
-    	}
+
+    <header id="navbar">
+    	<a href="/">
+    		<img src="assets/Mutant_Remix_Wordmark.svg" id="navlanding" alt="Mutant Remix logo" />
+    	</a>
+    	<nav>
+    		<ul>
+    			<li><a href="/releases">Releases</a></li>
+    			<li><a href="/downloads">Downloads</a></li>
+    		</ul>
+    	</nav>
+    </header>
     
-    	#herotext {
-    		display: block;
-    		max-width: 60vw;
-    	}
+    <main>
     
-    	#herotext h1 {
-    		font-size: 4rem;
-    		line-height: 4rem;
-    		margin-bottom: 1rem;
-    	}
-    
-    	#information {
-    		max-width: 100ch;
-    	}
-    
-    	h2 {
-    		margin-top: 1rem;
-    	}
-    
-    	#lists {
-    		display: flex;
-    		text-align: left;
-    		padding: 0 3rem;
-    		gap: 1rem;
-    	}
-    
-    	li {
-    		list-style-position: inside;
-    	}
-    
-    	#dos {
-    		list-style-image: url("/assets/green_tick.svg");
-    	}
-    
-    	#donts {
-    		list-style-image: url("/assets/red_cross.svg");
-    	}
-    
-    	#bubble {
-    		background: var(--orange);
-    		border-radius: 35px;
-    		padding: 20px 65px;
-    	}
-    
-    	@media (max-width: 1000px) {
-    		#lists {
-    			flex-direction: column;
-    			padding: 0;
-    		}
-    
-    		#hero {
-    			flex-direction: column-reverse;
-    			text-align: center;
-    		}
-    
-    		#herotext {
-    			max-width: 100%
-    		}
-    
-    		#bubble {
-    			padding: 20px;
-    
-    		}
-    </style>
-    
-    <div id="landing">
-    	<div id="hero">
-    		<div id="herotext">
-    			<h1>An emoji pack so good, you'll never want to use another.</h1>
-    			Mutant Remix brings a new twist to the good old emojis that have become a part of our daily
-    			conversations.
-    			</br>
-    			<button class="pushable" onclick="location.href='https://github.com/mutant-remix/mutant-remix/releases'">
-    				<span class="edge" style="background: var(--dark_orange);"></span>
-    				<span class="front" style="background: var(--orange);">
-    					Take me to the downloads!
-    				</span>
-    			</button>
-    		</div>
-    		<div id="heroimage">
-    			<img src="assets/Emoji_Hero.svg" alt="Emojis bursting from centre point">
-    		</div>
+
+    <div id="hero">
+    	<div id="herotext">
+    		<h1>An emoji pack so good, you'll never want to use another.</h1>
+    		<p>Mutant Remix brings a new twist to the good old emojis that have become a part of our daily conversations.</p>
+    		<button class="pushable" onclick="location.href='/downloads'">
+    			<span class="edge" style="background: var(--dark_orange)"></span>
+    			<span class="front" style="background: var(--orange)">Take me to the downloads!</span>
+    		</button>
     	</div>
+    	<img id="heroimage" src="assets/Emoji_Hero.svg" alt="Emojis bursting from center point" />
+    </div>
     
-    	<div id="information">
+    <div id="landingbody">
+    	<section>
     		<h2>Express yourself in new ways.</h2>
-    		<p>Mutant introduces an exciting array of fresh and distinctive emojis along with various variations, offering
-    			you the freedom to express yourself through emojis the way you truly like.</p>
+    		<p>Mutant Remix introduces an exciting array of fresh and distinctive emojis along with various variations, offering you the freedom to express yourself through emojis the way you truly like.</p>
+    	</section>
     
+    	<section>
     		<h2>Simple, and just darn cute.</h2>
-    		<p>Mutant Remix pays homage to the good old Android blob emojis and combining the same style with the
-    			amazing-looking Mutant Standard emoji pack.</p>
+    		<p>Mutant Remix pays homage to the good old Android blob emojis and combining the same style with the amazing-looking Mutant Standard emoji pack.</p>
+    		<img src="assets/Emoji_Formula.svg" alt="Emojis bursting from center point" />
+    	</section>
     
-    		<img style="margin-left: auto; margin-right: auto;" src="assets/Emoji_Formula.svg"
-    			alt="Emojis bursting from centre point">
-    
+    	<section>
     		<h2>Want it? Use it!</h2>
-    		<p>Mutant Remix is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International
-    			License. Feel free to go crazy with it - as long as you respect the license.</p>
+    		<p>Mutant Remix is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Feel free to go crazy with it - as long as you respect the license.</p>
+    		<img id="copyright" src="assets/Copyright.svg" alt="Emojis bursting from center point" />
+    	</section>
     
-    		<img style="width: 250px; margin-left: auto; margin-right: auto;" src="assets/Copyright.svg"
-    			alt="Emojis bursting from centre point">
-    
+    	<section>
     		<h2>Help us make it better.</h2>
-    		<p>Think Mutant Remix is cool? Want to contribute to the project? Mutant Remix is always looking for
-    			contributors
-    			of all backgrounds. Get involved!</p>
+    		<p>
+    			Think Mutant Remix is cool? Want to contribute to the project? Mutant Remix is always looking for contributors of all backgrounds.
+    			<a href="https://github.com/mutant-remix/mutant-remix/blob/master/CONTRIBUTING.md">Get involved!</a>
+    		</p>
+    	</section>
     
+    	<section>
     		<h2>So, what am I allowed to do with it?</h2>
     		<p>Here are a few ground rules regarding how you can use the emoji pack:</p>
-    
     		<div id="lists">
     			<ul id="dos">
     				<li>
     					<h3>Share the emoji pack with your friends!</h3>
-    					<p>Share the love, share the mutants. Copy and redistribute Mutant Remix as you see fit, embracing
-    						the spirit of collaboration and creativity.</p>
+    					<p>Share the love, share the mutants. Copy and redistribute Mutant Remix as you see fit, embracing the spirit of collaboration and creativity.</p>
     				</li>
     				<li>
     					<h3>Make it your own! (add attribution!)</h3>
-    					<p>You’re free to remix, transform or build upon the Mutant Remix or Mutant Standard emoji pack, as
-    						long as you follow the original Creative Commons license.</p>
+    					<p>You’re free to remix, transform or build upon the Mutant Remix or Mutant Standard emoji pack, as long as you follow the original Creative Commons license.</p>
     				</li>
     			</ul>
     			<ul id="donts">
     				<li>
     					<h3>Use it for any commercial purposes.</h3>
-    					<p>You’re not allowed to sell the entirety or parts of the emoji pack or restrict anyone from using
-    						it behind a paywall.</p>
+    					<p>You’re not allowed to sell the entirety or parts of the emoji pack or restrict anyone from using it behind a paywall.</p>
     				</li>
     				<li>
     					<h3>Break the license terms.</h3>
-    					<p>Mutant, and Mutant Remix by extension, are both licensed under the Creative Commons
-    						Attribution-NonCommercial-ShareAlike 4.0 International License.</p>
+    					<p>Mutant, and Mutant Remix by extension, are both licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License.</p>
     				</li>
     			</ul>
     		</div>
+    	</section>
     
-    		<div id="bubble">
-    			<h2>#SaveTheBlobs</h2>
-    			<p>Help us to save these cute blobs! By using the Mutant Remix emoji pack, you’re not only supporting
-    				open-source projects like ours, but are also helping us keep our blobby friends alive. Thank you!</p>
-    		</div>
-    	</div>
+    	<section id="bubble">
+    		<h2>#SaveTheBlobs</h2>
+    		<p>
+    			Help us to save these cute blobs! By using the Mutant Remix emoji pack, you’re not only supporting open-source projects like ours, but are also helping us keep our blobby friends alive. Thank
+    			you!
+    		</p>
+    	</section>
     </div>
     
 
-    <footer>
-    	Mutant Remix is not affiliated with <a href="https://mutant.tech/">mutant.tech</a>.
-    	This is a transformation of the original Mutant Standard emoji pack, which is licensed under the Creative Commons
-    	Attribution-NonCommercial-ShareAlike 4.0 International License.
-    	Site built with <a href="https://adduce.vale.rocks">Adduce</a>.
-    </footer>
+    		</main>
     
-</div>
-</body>
-</html>
+    		<footer>
+    			Mutant Remix is not affiliated with <a href="https://adduce.vale.rocks">mutant.tech</a>. This is a transformation of the original Mutant Standard emoji pack, which is licensed under the Creative
+    			Commons Attribution-NonCommercial-ShareAlike 4.0 International License. Site built with <a href="https://adduce.vale.rocks">Adduce</a>.
+    		</footer>
+    	</body>
+    </html>
+    

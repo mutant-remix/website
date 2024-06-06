@@ -1,10 +1,22 @@
 #!/usr/bin/env bash
 
-# Generate pages
-adduce -c config/pages/index -n index.html -o docs
-adduce -c config/pages/demo -n demo.html -o docs
-adduce -c config/pages/404 -n 404.html -o docs
+#!/usr/bin/env bash
 
-# Copy required material
-cp -r config/global/style docs/
+# Generate standard pages
+pages=(
+    "config/pages/index index.html"
+    "config/pages/downloads downloads.html"
+    "config/pages/releases releases.html"
+	"config/pages/404 404.html"
+)
+
+for page_config in "${pages[@]}"; do
+    page="${page_config%% *}"
+    output="${page_config#* }"
+    adduce -c "$page" -n "$output" -o docs
+done
+
+# Copy global styles and assets
+cp -r config/global/styles docs/
 cp -r config/global/assets docs/
+cp -r config/global/scripts docs/

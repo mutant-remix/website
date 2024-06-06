@@ -1,0 +1,21 @@
+body {
+	min-height: 100lvh;
+	margin: 0 3rem 3rem;
+	color: light-dark(var(--dark_grey), var(--white));
+	background-color: light-dark(var(--white), var(--grey));
+}
+
+main {
+	margin: 5rem auto;
+	max-width: 1000px;
+}
+
+#header {
+	padding: 3rem 0;
+}
+
+@media (max-width: 700px) {
+	body {
+		margin: 0 0.8rem 0.8rem;
+	}
+}

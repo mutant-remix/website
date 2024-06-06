@@ -19,8 +19,11 @@
     		<meta property="og:image:height" content="720" />
     
 
-        <title>Page Not Found | Mutant Remix</title>
-        <meta property="og:title" content="Page Not Found | Mutant Remix"/>
+        <title>Releases | Mutant Remix</title>
+        <meta property="og:title" content="Releases | Mutant Remix"/>
+        <meta name="description" content="Visit our releases page to find the latest additions to the Mutant Remix emoji pack. Stay updated with new and exciting emojis that bring your messages to life." />
+        <meta property="og:description" content="See the latest and greatest in blob technology." />
+    		<link rel="stylesheet" href="/styles/pages/releases.css">
     </head>
     
     <body>
@@ -39,31 +42,21 @@
     </header>
     
     <main>
-    <head>
-	<title>Page Not Found</title>
-</head>
-<style>
-    body {
-        text-align: center;
-    }
+    
 
-    img {
-        margin-left: auto;
-        margin-right: auto;
-        max-height: 30vh;
-    }
-</style>
-<img src="assets/raised_eyebrow.svg"/>
-<h1>Page Not Found</h1>
-<p>We're not sure how you got here considering this page doesn't exist...</p>
-<button class="pushable" onclick="location.href='/'">
-    <span class="edge" style="background: var(--dark_orange)">
-    </span>
-	    <span class="front" style="background: var(--orange);">
-	    Return to the home page
-    	</span>
-</button>
-
+    <section id="header">
+    	<h1>Releases</h1>
+    	<p>See the latest and greatest in blob technology.</p>
+    </section>
+    
+    <div id="releases"></div>
+    
+    <noscript>
+    	<p>You can view all the releases <a href="https://github.com/mutant-remix/mutant-remix/releases">on our GitHub</a>.</p>
+    </noscript>
+    
+    <script src="/scripts/releases.js"></script>
+    
 
     		</main>
     

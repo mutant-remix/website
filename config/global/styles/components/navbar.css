@@ -1,0 +1,46 @@
+header#navbar {
+	color: var(--white);
+	width: 100%;
+	padding: 1rem 3rem;
+	height: 5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	text-transform: lowercase;
+	font-weight: 900;
+	background: var(--light_grey);
+	z-index: 1000;
+	
+	#navlanding {
+		height: 2.5rem;
+		width: auto;
+	}
+
+	a {
+		all: unset;
+		cursor: pointer;
+		pointer-events: all;
+	}
+
+	nav {
+		ul {
+			all: unset;
+			display: flex;
+			gap: 1rem;
+
+			li {
+				all: unset;
+			}
+		}
+	}
+}
+
+@media (max-width: 700px) {
+	header#navbar {
+		padding: 1rem 0.8rem;
+	}
+}

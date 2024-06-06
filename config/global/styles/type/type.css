@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow&display=swap");
+
+p {
+	margin-bottom: 0.8rem;
+}
+
+li {
+	list-style-position: inside;
+	line-height: 1.4rem;
+	margin-bottom: 0.3rem;
+}
+
+::selection {
+	background: var(--blue);
+}

@@ -1,0 +1,84 @@
+#hero {
+	display: flex;
+	height: 85dvh;
+	align-items: center;
+
+	#herotext {
+		display: flex;
+		flex-direction: column;
+		min-width: 20rem;
+		flex: 1;
+
+		button {
+			.front {
+				padding: 1rem 1rem;
+			}
+		}
+	}
+
+	#heroimage {
+		height: 100%;
+		width: 100%;
+		flex: 1;
+	}
+}
+
+#landingbody {
+	display: flex;
+	flex-direction: column;
+	gap: 5rem;
+
+	section {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		text-align: center;
+	}
+
+	#copyright {
+		max-width: 18rem;
+	}
+
+	#lists {
+		display: flex;
+		text-align: left;
+		margin-left: 2rem;
+		gap: 3rem;
+
+		#dos li {
+			list-style-image: url("/assets/green_tick.svg");
+			list-style-position: outside;
+		}
+
+		#donts li {
+			list-style-image: url("/assets/red_cross.svg");
+			list-style-position: outside;
+		}
+	}
+
+	#bubble {
+		color: var(--white);
+		background-color: var(--orange);
+		padding: 2rem 1rem;
+		border-radius: 1rem;
+	}
+}
+
+@media (max-width: 800px) {
+	#hero {
+		flex-direction: column-reverse;
+		justify-items: center;
+		margin-bottom: 5rem;
+
+		#herotext {
+			text-align: center;
+		}
+	}
+}
+
+@media (max-width: 750px) {
+	#landingbody #lists {
+		flex-direction: column;
+		gap: 0;
+	}
+}
