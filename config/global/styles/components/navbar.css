@@ -11,7 +11,7 @@ header#navbar {
 	top: 0;
 	left: 0;
 	text-transform: lowercase;
-	font-weight: 900;
+	font-weight: 700;
 	background: var(--light_grey);
 	z-index: 1000;
 	

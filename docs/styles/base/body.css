@@ -3,10 +3,12 @@ body {
 	margin: 0 3rem 3rem;
 	color: light-dark(var(--dark_grey), var(--white));
 	background-color: light-dark(var(--white), var(--grey));
+	font-family: "Barlow", sans-serif;
 }
 
 main {
-	margin: 5rem auto;
+	padding: 5rem 0;
+	margin: auto;
 	max-width: 1000px;
 }
 

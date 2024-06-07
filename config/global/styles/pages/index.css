@@ -68,6 +68,7 @@
 	#hero {
 		flex-direction: column-reverse;
 		justify-items: center;
+		padding-top: 1rem;
 		margin-bottom: 5rem;
 
 		#herotext {
