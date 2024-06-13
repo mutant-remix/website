@@ -23,11 +23,11 @@ document.addEventListener("DOMContentLoaded", function () {
 		try {
 			const latestVersion = await fetchLatestRelease();
 			if (!latestVersion) return;
-			const buttons = document.querySelectorAll('button[onclick*="https://github.com/mutant-remix/mutant-remix/releases/download/"]');
-			buttons.forEach((button) => {
-				const oldOnclick = button.getAttribute("onclick");
-				const newOnclick = oldOnclick.replace(/v00/g, latestVersion);
-				button.setAttribute("onclick", newOnclick);
+			const links = document.querySelectorAll('a[href*="https://github.com/mutant-remix/mutant-remix/releases/download/"]');
+			links.forEach((link) => {
+				const oldHref = link.getAttribute("href");
+				const newHref = oldHref.replace(/v00/g, latestVersion);
+				link.setAttribute("href", newHref);
 			});
 		} catch (error) {
 			console.error("Error updating buttons with latest release:", error);

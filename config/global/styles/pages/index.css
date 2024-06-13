@@ -9,9 +9,11 @@
 		min-width: 20rem;
 		flex: 1;
 
-		button {
-			.front {
-				padding: 1rem 1rem;
+		.button {
+			background-color: var(--dark_orange);
+
+			span {
+				background-color: var(--orange);
 			}
 		}
 	}

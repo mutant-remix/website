@@ -12,6 +12,47 @@
 	margin-top: 3rem;
 }
 
+.download-svg {
+	.button {
+		background-color: var(--dark_orange);
+
+		span {
+			background-color: var(--orange);
+		}
+	}
+}
+
+.download-png {
+	.button {
+		background-color: var(--dark_aqua);
+
+		span {
+			background-color: var(--aqua);
+		}
+	}
+}
+
+.download-webp {
+	.button {
+		background-color: var(--dark_blue);
+
+		span {
+			background-color: var(--blue);
+		}
+	}
+}
+
+.download-mastodon,
+.download-json {
+	.button {
+		background-color: var(--dark_purple);
+
+		span {
+			background-color: var(--purple);
+		}
+	}
+}
+
 @media (max-width: 750px) {
 	#options {
 		flex-direction: column;
