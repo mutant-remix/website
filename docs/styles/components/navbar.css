@@ -14,28 +14,39 @@ header#navbar {
 	font-weight: 700;
 	background: var(--light_grey);
 	z-index: 1000;
-	
+
 	#navlanding {
 		height: 2.5rem;
 		width: auto;
 	}
 
 	a {
-		all: unset;
+		color: inherit;
+		text-decoration: none;
 		cursor: pointer;
 		pointer-events: all;
 	}
 
-	nav {
-		ul {
-			all: unset;
-			display: flex;
-			gap: 1rem;
+	nav ul {
+		display: flex;
+		gap: 1rem;
+		list-style: none;
+	}
 
-			li {
-				all: unset;
-			}
-		}
+	.skip-link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0.5rem;
+		margin: 1rem;
+		border-radius: 0.25rem;
+		background: var(--grey);
+		transform: translateY(calc(-100% - 1rem));
+		transition: transform 150ms;
+	}
+
+	.skip-link:focus {
+		transform: translateY(0%);
 	}
 }
 
