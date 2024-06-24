@@ -1,7 +1,5 @@
 #!/usr/bin/env bash
 
-#!/usr/bin/env bash
-
 # Generate standard pages
 pages=(
     "config/pages/index index.html"
@@ -13,7 +11,7 @@ pages=(
 for page_config in "${pages[@]}"; do
     page="${page_config%% *}"
     output="${page_config#* }"
-    /home/vale/gitrepos/Adduce/target/release/adduce -c "$page" -n "$output" -o docs
+    adduce -c "$page" -n "$output" -o docs
 done
 
 # Copy global styles and assets
