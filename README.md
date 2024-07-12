@@ -11,7 +11,8 @@
 
 The is the site for the Mutant Remix emoji pack. You can view the site live at [mutant.revolt.chat](https://mutant.revolt.chat).
 
-This site was created with [Adduce](https://adduce.vale.rocks). It uses both the standard and feed functionality in tandem. For any questions regarding this site contact [Vale](https://vale.rocks).
+This site is built with the static site generator [Adduce](https://adduce.vale.rocks) and any questions regarding this site should be directed to [Vale](https://vale.rocks/contact).
 
-### Building
-To build the site you can run `sh gen.sh`. The `gen.sh` file will need editing whenever adding new pages to the site. It will output the site to the `docs/` folder so it can be easily published using Github Pages.
+## Building
+
+To build the site, you need to ensure you have Adduce installed. Then run `gen.sh` from the repository's root with `sh gen.sh`. The `gen.sh` file will need editing whenever adding new pages to the site. It will output the site to the `docs/` folder for easy publication using Github Pages.
