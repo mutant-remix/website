@@ -1,13 +1,17 @@
-#hero {
+.hero {
 	display: flex;
-	height: 85dvh;
+	gap: 4rem;
+	justify-content: space-around;
 	align-items: center;
+	min-height: calc(90vh - 5rem);
+	max-width: 70rem;
+	margin: auto;
 
-	#herotext {
+	div {
 		display: flex;
 		flex-direction: column;
-		min-width: 20rem;
-		flex: 1;
+		gap: 1rem;
+		text-wrap: balance;
 
 		.button {
 			background-color: var(--dark_orange);
@@ -18,70 +22,82 @@
 		}
 	}
 
-	#heroimage {
+	img {
+		max-width: 50%;
+		max-height: 25rem;
+		border-radius: 2rem;
+	}
+
+	@media (max-width: 50rem) {
+		flex-direction: column-reverse;
+		gap: 1rem;
+		text-align: center;
+		justify-content: center;
+		padding: 3rem 1rem;
 		height: 100%;
-		width: 100%;
-		flex: 1;
+
+		.button {
+			margin: auto;
+		}
 	}
 }
 
-#landingbody {
+.landing-body {
 	display: flex;
 	flex-direction: column;
 	gap: 5rem;
+	max-width: 80ch;
+	margin: auto;
 
 	section {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		text-align: center;
+
+		> * + * {
+			margin-top: 1rem;
+		}
 	}
 
-	#copyright {
+	.copyright-badge {
 		max-width: 18rem;
 	}
 
-	#lists {
+	.lists {
 		display: flex;
 		text-align: left;
 		margin-left: 2rem;
 		gap: 3rem;
 
-		#dos li {
+		ul * + * {
+			margin-top: 2rem;
+		}
+
+		li p {
+			margin-top: 0.5rem;
+		}
+
+		.dos li {
 			list-style-image: url("/assets/green_tick.svg");
 			list-style-position: outside;
 		}
 
-		#donts li {
+		.donts li {
 			list-style-image: url("/assets/red_cross.svg");
 			list-style-position: outside;
 		}
-	}
 
-	#bubble {
-		color: var(--white);
-		background-color: var(--orange);
-		padding: 2rem 1rem;
-		border-radius: 1rem;
-	}
-}
-
-@media (max-width: 800px) {
-	#hero {
-		flex-direction: column-reverse;
-		justify-items: center;
-		padding-top: 1rem;
-		margin-bottom: 5rem;
-
-		#herotext {
-			text-align: center;
+		@media (max-width: 35rem) {
+			flex-direction: column;
 		}
 	}
-}
 
-@media (max-width: 750px) {
-	#landingbody #lists {
-		flex-direction: column;
-		gap: 0;
+	.bubble {
+		color: var(--white);
+		background-color: var(--orange);
+		padding: 3rem 2rem;
+		border-radius: 2rem;
+		margin-bottom: 2rem;
 	}
 }

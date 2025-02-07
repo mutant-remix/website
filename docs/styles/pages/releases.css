@@ -1,16 +1,25 @@
+main {
+	max-width: 90ch;
+	margin: auto;
+}
+
 #releases {
+	> * + * {
+		border-top: 3px solid var(--light_grey);
+	}
+
 	.release {
-		padding: 1rem 0;
-		border-bottom: 3px solid var(--light_grey);
+		padding: 1rem;
+		margin: 0.5rem;
 
 		a {
 			color: inherit;
 			text-decoration: none;
 		}
 
-		h2,
-		p {
-			margin: 0;
+		&:hover {
+			color: var(--white);
+			background: light-dark(var(--grey), var(--light_grey));
 		}
 	}
 }

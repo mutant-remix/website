@@ -1,5 +1,6 @@
 .button {
 	display: inline-block;
+	width: fit-content;
 	border-radius: 0.5rem;
 	margin: 0.5rem 0;
 	text-decoration: none;
@@ -7,7 +8,7 @@
 	outline: none;
 
 	span {
-		display: block;
+		display: inherit;
 		border-radius: 0.5rem;
 		padding: 0.5rem 1rem;
 		font-size: 1.25rem;
@@ -17,19 +18,19 @@
 		transform: translateY(-0.25rem);
 		transition: transform 150ms cubic-bezier(0.3, 0.7, 0.4, 1);
 	}
-}
 
-.button:focus-visible {
-	outline: revert;
-}
+	&:focus-visible {
+		outline: revert;
+	}
 
-.button:hover span,
-.button:focus span {
-	transform: translateY(-0.4rem);
-}
+	&:hover span,
+	&:focus span {
+		transform: translateY(-0.4rem);
+	}
 
-.button:active span {
-	transform: translateY(-0.1rem);
+	&:active span {
+		transform: translateY(-0.1rem);
+	}
 }
 
 :focus {

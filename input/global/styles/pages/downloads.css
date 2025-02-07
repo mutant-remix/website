@@ -1,11 +1,25 @@
+main {
+	max-width: 90ch;
+	margin: auto;
+}
+
 #options,
 #other {
 	display: none;
+
+	p {
+		margin-top: 0.5rem;
+		margin-bottom: 1rem;
+	}
 }
 
 #options {
 	/* Set to flex in download.js */
 	gap: 3rem;
+
+	@media (max-width: 45rem) {
+		flex-direction: column;
+	}
 }
 
 #other {
@@ -50,11 +64,5 @@
 		span {
 			background-color: var(--purple);
 		}
-	}
-}
-
-@media (max-width: 750px) {
-	#options {
-		flex-direction: column;
 	}
 }

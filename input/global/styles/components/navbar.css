@@ -1,36 +1,37 @@
-header#navbar {
-	color: var(--white);
-	width: 100%;
-	padding: 1rem 3rem;
-	height: 5rem;
-	display: flex;
-	align-items: center;
-	justify-content: space-between;
-	gap: 1rem;
+#navbar {
 	position: fixed;
-	top: 0;
-	left: 0;
-	text-transform: lowercase;
-	font-weight: 700;
+	inset: 0 0 auto 0;
+	height: 5rem;
+	padding: 0 3rem;
+	color: var(--white);
 	background: var(--light_grey);
 	z-index: 1000;
-
-	#navlanding {
-		height: 2.5rem;
-		width: auto;
-	}
+	transition: 0.5s;
 
 	a {
 		color: inherit;
 		text-decoration: none;
-		cursor: pointer;
-		pointer-events: all;
 	}
 
-	nav ul {
+	nav {
 		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		height: 100%;
+		font-weight: 700;
+		text-transform: lowercase;
 		gap: 1rem;
-		list-style: none;
+
+		#navlanding {
+			height: 2.2rem;
+			width: auto;
+		}
+
+		ul {
+			display: flex;
+			gap: 1rem;
+			list-style: none;
+		}
 	}
 
 	.skip-link {
@@ -39,19 +40,18 @@ header#navbar {
 		left: 0;
 		padding: 0.5rem;
 		margin: 1rem;
-		border-radius: 0.25rem;
-		background: var(--grey);
+		background: light-dark(var(--white), var(--grey));
 		transform: translateY(calc(-100% - 1rem));
-		transition: transform 150ms;
+		transition: transform 0.1s;
+		border-radius: 0.25rem;
+
+		&:focus-within {
+			transform: translateY(0%);
+		}
 	}
 
-	.skip-link:focus {
-		transform: translateY(0%);
-	}
-}
-
-@media (max-width: 700px) {
-	header#navbar {
-		padding: 1rem 0.8rem;
+	@media (max-width: 45rem) {
+		height: 4rem;
+		padding: 0 0.8rem;
 	}
 }

@@ -1,13 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-p {
-	margin-bottom: 0.8rem;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-wrap: balance;
+	font-weight: 700;
+}
+
+h1 {
+	font-size: 2.5rem;
+	line-height: 2.7rem;
+}
+
+h2 {
+	font-size: 2rem;
+	line-height: 2.2rem;
+}
+
+h3 {
+	font-size: 1.8rem;
+	line-height: 2rem;
+}
+
+h4 {
+	font-size: 1rem;
+	line-height: 1.2rem;
+}
+
+h5 {
+	font-size: 0.8rem;
+	line-height: 1rem;
+}
+
+h6 {
+	font-size: 0.6rem;
+	line-height: 0.8rem;
+}
+
+.header {
+	padding: 3rem 0;
+}
+
+a {
+	color: light-dark(var(--blue), var(--orange));
+	text-underline-offset: 2px;
+	text-decoration-thickness: 1px;
+	word-break: break-word;
 }
 
 li {
 	list-style-position: inside;
 	line-height: 1.4rem;
-	margin-bottom: 0.3rem;
 }
 
 ::selection {
