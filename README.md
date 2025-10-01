@@ -9,7 +9,7 @@
   [![Licence](https://img.shields.io/github/license/mutant-remix/website?style=flat-square&logoColor=white)](https://github.com/mutant-remix/website/blob/main/LICENCE)
 </h1>
 
-The is the site for the Mutant Remix emoji pack. You can view the site live at [mutant.revolt.chat](https://mutant.revolt.chat).
+The is the site for the Mutant Remix emoji pack. You can view the site live at [mutant.stoat.chat](https://mutant.stoat.chat).
 
 This site is built with the static site generator [Adduce](https://adduce.vale.rocks) and any questions regarding this site should be directed to [Vale](https://vale.rocks/contact).
 
